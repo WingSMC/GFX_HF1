@@ -109,10 +109,12 @@ struct mat4 { // row-major matrix 4x4
 	vec4 rows[4];
 public:
 	mat4() {}
-	mat4(float m00, float m01, float m02, float m03,
+	mat4(
+		float m00, float m01, float m02, float m03,
 		float m10, float m11, float m12, float m13,
 		float m20, float m21, float m22, float m23,
-		float m30, float m31, float m32, float m33) {
+		float m30, float m31, float m32, float m33
+	) {
 		rows[0][0] = m00; rows[0][1] = m01; rows[0][2] = m02; rows[0][3] = m03;
 		rows[1][0] = m10; rows[1][1] = m11; rows[1][2] = m12; rows[1][3] = m13;
 		rows[2][0] = m20; rows[2][1] = m21; rows[2][2] = m22; rows[2][3] = m23;
@@ -292,10 +294,11 @@ public:
 
 	unsigned int getId() { return shaderProgramId; }
 
-	bool create(const char * const vertexShaderSource,
-		        const char * const fragmentShaderSource, const char * const fragmentShaderOutputName,
-		        const char * const geometryShaderSource = nullptr)
-	{
+	bool create(const char* const vertexShaderSource,
+		        const char* const fragmentShaderSource,
+		        const char* const fragmentShaderOutputName,
+		        const char* const geometryShaderSource = nullptr
+	) {
 		// Create vertex shader from string
 		if (vertexShader == 0) vertexShader = glCreateShader(GL_VERTEX_SHADER);
 		if (!vertexShader) {

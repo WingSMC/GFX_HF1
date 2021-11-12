@@ -1,1 +1,8 @@
 .history
+.vs
+
+Debug
+Release
+
+*.exe
+*.pdb

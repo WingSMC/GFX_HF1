@@ -76,7 +76,6 @@
   <ItemGroup>
     <ClCompile Include="framework.cpp" />
     <ClCompile Include="Skeleton.cpp" />
-    <ClCompile Include="triangle_and_line.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
